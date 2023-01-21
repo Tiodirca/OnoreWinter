@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:onorewinter/Telas/tela_cadastro_cliente.dart';
 import 'package:onorewinter/Telas/tela_inicial.dart';
 import 'package:onorewinter/Telas/tela_login.dart';
 
@@ -16,6 +17,8 @@ class Rotas {
         return MaterialPageRoute(builder: (_) => const TelaInicial());
       case Constantes.rotasTelaLogin:
         return MaterialPageRoute(builder: (_) => const TelaLogin());
+      case Constantes.rotasTelaCadUsuarioCliente:
+        return MaterialPageRoute(builder: (_) => const TelaCadastroCliente());
     }
     // Se o argumento não é do tipo correto, retorna erro
     return erroRota(settings);

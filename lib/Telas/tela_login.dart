@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Uteis/constantes.dart';
 import '../Uteis/paleta_cores.dart';
 import '../Uteis/textos.dart';
 import '../Widgets/campo_formulario.dart';
@@ -20,8 +21,6 @@ class _TelaLoginState extends State<TelaLogin> {
   Widget build(BuildContext context) {
     double larguraTela = MediaQuery.of(context).size.width;
     double alturaTela = MediaQuery.of(context).size.height;
-    double alturaBarraStatus = MediaQuery.of(context).padding.top;
-    double alturaAppBar = AppBar().preferredSize.height;
     return Scaffold(
       body: SizedBox(
           height: alturaTela,
@@ -64,10 +63,7 @@ class _TelaLoginState extends State<TelaLogin> {
                                 backgroundColor: Colors.white70,
                               ),
                               onPressed: () {
-                                // if (chaveFormulario.currentState!.validate()) {
-                                //   print(controllerEmail.text);
-                                //   print(controllerSenha.text);
-                                // }
+                               Navigator.of(context).pushNamed(Constantes.rotasTelaCadUsuarioCliente);
                               },
                               child: Text(
                                 Textos.btnCriarConta,

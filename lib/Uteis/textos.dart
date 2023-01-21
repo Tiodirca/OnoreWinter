@@ -15,7 +15,17 @@ class Textos {
   // Textos das CATEGORIAS
   static String categoriaDescricao = "Categorias";
 
-  // Textos TELA LOGIN
+  static String telaCriarContaCliente = "Criar Conta";
+
+  // Labels de acesso
   static String labelEmail = "E-mail";
   static String labelSenha = "Senha";
+  static String labelConfirmeSenha = "Confirme sua Senha";
+
+  // labels de pessoa fisica
+  static String labelNomeCliente = "Seu nome";
+  static String labelCPF = "CPF";
+  static String labelIdade = "Idade";
+  static String labelDataNascimento = "Data de Nascimento";
+  static String labelTelefone = "Telefone";
 }

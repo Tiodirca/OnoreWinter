@@ -59,6 +59,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                             height: 35,
                             child: FloatingActionButton(
                               onPressed: () {},
+                              heroTag: "btnPesquisa",
                               backgroundColor: PaletaCores.corOuro,
                               hoverElevation: 10,
                               hoverColor: PaletaCores.corVerde,
@@ -79,6 +80,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                     height: 35,
                     child: FloatingActionButton(
                       onPressed: () {},
+                      heroTag: "btnCarrinho",
                       hoverColor: Colors.lightGreen,
                       child: const Icon(Icons.shopping_cart, size: 25),
                     ),
@@ -88,6 +90,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                     height: 35,
                     child: FloatingActionButton(
                       onPressed: () {},
+                      heroTag: "btnAcessarConta",
                       hoverColor: PaletaCores.corVerde,
                       child: const Icon(Icons.account_circle, size: 25),
                     ),
