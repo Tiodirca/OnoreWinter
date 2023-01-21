@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onorewinter/Modelo/produto.dart';
 import 'package:onorewinter/Widgets/app_bar_widget.dart';
 import 'package:onorewinter/Widgets/card_produto.dart';
 import 'package:onorewinter/Widgets/categorias.dart';
@@ -11,20 +12,62 @@ class TelaInicial extends StatefulWidget {
 }
 
 class _TelaInicialState extends State<TelaInicial> {
-  int qtdProdutos = 100;
+  int qtdProdutos = 10;
 
-  Widget exibicaoTelaMaiores(int numColunas) => Row(
-        children: [
-          const Expanded(flex: 1, child: CategoriasProdutos()),
-          Expanded(
-              flex: 5,
-              child: GridView.count(
-                crossAxisCount: numColunas,
-                children: List.generate(qtdProdutos, (index) {
-                  return const CardProduto();
-                }),
-              ))
-        ],
+  List<Produto> listaProdutos = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    listaProdutos.add(Produto(
+        id: 1,
+        descricao: "SD 240 GB Kingston A400, SATA, Leitura:"
+            " 500MB/s e Gravação: 350MB/s - SA400S37/24 - SA400S37/240G",
+        categoria: "SSD",
+        valor: 129.29,
+        imagem: "imagem"));
+    listaProdutos.add(Produto(
+        id: 2,
+        descricao: "SD 240 GB Kingston A400, SATA, Leitura:"
+            " 500MB/s e Gravação: 350MB/s - SA400S37/240G",
+        categoria: "SSD",
+        valor: 129.29,
+        imagem: "imagem"));
+    listaProdutos.add(Produto(
+        id: 3,
+        descricao: "SD 240 GB Kingston A400, SATA, Leitura:"
+            " 500MB/s e Gravação: 350MB/s - SA400S37/240G",
+        categoria: "SSD",
+        valor: 129.29,
+        imagem: "imagem"));
+    listaProdutos.add(Produto(
+        id: 4,
+        descricao: "SD 240 GB Kingston A400, SATA, Leitura:"
+            " 500MB/s e Gravação: 350MB/s - SA400S37/240G",
+        categoria: "SSD",
+        valor: 129.29,
+        imagem: "imagem"));
+    listaProdutos.add(Produto(
+        id: 5,
+        descricao: "SD 240 GB Kingston A400, SATA, Leitura:"
+            " 500MB/s e Gravação: 350MB/s - SA400S37/240G",
+        categoria: "SSD",
+        valor: 129.29,
+        imagem: "imagem"));
+  }
+
+  Widget exibicaoTelaMaiores(int numColunas) => Container(
+        margin: const EdgeInsets.all(10),
+        child: GridView.count(
+          childAspectRatio: 0.7,
+          crossAxisCount: numColunas,
+          children: List.generate(listaProdutos.length, (index) {
+            return CardProduto(
+              produto: listaProdutos.elementAt(index),
+            );
+          }),
+        ),
       );
 
   @override
@@ -47,8 +90,10 @@ class _TelaInicialState extends State<TelaInicial> {
                   if (larguraTela < 650) {
                     return GridView.count(
                       crossAxisCount: 1,
-                      children: List.generate(qtdProdutos, (index) {
-                        return const CardProduto();
+                      children: List.generate(listaProdutos.length, (index) {
+                        return CardProduto(
+                          produto: listaProdutos.elementAt(index),
+                        );
                       }),
                     );
                   } else if (larguraTela > 650 && larguraTela < 950) {
@@ -56,7 +101,7 @@ class _TelaInicialState extends State<TelaInicial> {
                   } else if (larguraTela > 950 && larguraTela < 1300) {
                     return exibicaoTelaMaiores(3);
                   } else {
-                    return exibicaoTelaMaiores(4);
+                    return exibicaoTelaMaiores(5);
                   }
                 },
               )),

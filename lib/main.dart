@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:onorewinter/Telas/tela_inicial.dart';
+import 'package:onorewinter/Uteis/rotas.dart';
+
+import 'Uteis/constantes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const TelaInicial(),
+      initialRoute: Constantes.rotasTelaLogin,
+      onGenerateRoute: Rotas.generateRoute,
     );
   }
 }
