@@ -16,6 +16,11 @@ class Textos {
   static String categoriaDescricao = "Categorias";
 
   static String telaCriarContaCliente = "Criar Conta";
+  static String descricaoPoliticaPrivacidade =
+      "Ao clicar no botão criar conta você afirma estar de acordo com as ";
+  static String textBtnPoliticaPrivacidade =
+      "políticas da empresa e políticas de privacidade.";
+  static String descricaoPossuiConta = "Já possui cadastro ? ";
 
   // Labels de acesso
   static String labelEmail = "E-mail";

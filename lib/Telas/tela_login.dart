@@ -56,24 +56,15 @@ class _TelaLoginState extends State<TelaLogin> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         SizedBox(
-                          height: 40,
-                          width: 110,
-                          child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.white70,
-                              ),
+                            height: 40,
+                            width: 110,
+                            child: TextButton(
                               onPressed: () {
-                               Navigator.of(context).pushNamed(Constantes.rotasTelaCadUsuarioCliente);
+                                Navigator.of(context).pushNamed(
+                                    Constantes.rotasTelaCadUsuarioCliente);
                               },
-                              child: Text(
-                                Textos.btnCriarConta,
-                                style: const TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
-                                textAlign: TextAlign.center,
-                              )),
-                        ),
+                              child: Text(Textos.btnCriarConta),
+                            )),
                         SizedBox(
                           height: 40,
                           width: 200,
